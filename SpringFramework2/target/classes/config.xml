@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context.xsd">
+	<bean id="mob" class="demo.Mobile">
+		<property name="id" value="101"></property>
+		<property name="brand" value="POCO"></property>
+		<property name="price" value="10000"></property>
+	</bean>
+	<bean id="per" class="demo.Person">
+		<property name="id" value="201"></property>
+		<property name="name" value="ABC"></property>
+		<property name="mobile" ref="mob"></property>
+	</bean>
+</beans>
